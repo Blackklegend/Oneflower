@@ -16,6 +16,13 @@ onEvent('item.tags', event => {
 })
 
 onEvent('recipes', event => {
+	//Generic recipe remove
+	for (let remove of ['minecraft:blast_furnace']) {
+		event.remove({output: remove})
+	}
+	
+	//Ingots
+
 	//?Botania petal blocks
 	for (let colors of ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'red', 'black', 'blue', 'purple', 'brown', 'green' ]) {
 		event.remove({output: 'botania:' + colors + '_petal_block'})
@@ -26,4 +33,16 @@ onEvent('recipes', event => {
 			P: 'botania:' + colors + '_petal'
 		})
 	}
+
+	//Copper blast furnace
+	event.shaped('minecraft:blast_furnace', [
+		'SSS',
+		'CFC',
+		'BBB'
+	], {
+		S: 'minecraft:stone',
+		C: '#forge:ingots/copper',
+		F: 'minecraft:furnace',
+		B: 'minecraft:smooth_stone'
+	})
 })
