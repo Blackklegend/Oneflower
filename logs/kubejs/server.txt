@@ -1,0 +1,28 @@
+[20:40:41] [INFO ] server_scripts:script.js:8: Hello, World! (You will see this line every time server resources reload)
+[20:40:41] [INFO ] SourceFile:407: Loaded script server_scripts:script.js in 0.002 s
+[20:40:41] [INFO ] Scripts loaded
+[20:40:41] [INFO ] SourceFile:407: Loaded 1/1 KubeJS server scripts in 0.007 s
+[20:40:41] [INFO ] Scanning recipes...
+[20:40:42] [INFO ] [blocks] Found 395 tags, added 0 objects, removed 0 objects
+[20:40:42] [INFO ] [blocks] Found 395 tags, added 0 objects, removed 0 objects
+[20:40:42] [INFO ] [items] Found 662 tags, added 0 objects, removed 0 objects
+[20:40:42] [INFO ] [items] Found 662 tags, added 0 objects, removed 0 objects
+[20:40:42] [INFO ] [fluids] Found 19 tags, added 0 objects, removed 0 objects
+[20:40:42] [INFO ] [fluids] Found 19 tags, added 0 objects, removed 0 objects
+[20:40:42] [INFO ] [entity_types] Found 30 tags, added 0 objects, removed 0 objects
+[20:40:42] [INFO ] [entity_types] Found 30 tags, added 0 objects, removed 0 objects
+[20:40:42] [INFO ] [potions] Found 0 tags, added 0 objects, removed 0 objects
+[20:40:42] [INFO ] [potions] Found 0 tags, added 0 objects, removed 0 objects
+[20:40:42] [INFO ] [enchantments] Found 0 tags, added 0 objects, removed 0 objects
+[20:40:42] [INFO ] [enchantments] Found 0 tags, added 0 objects, removed 0 objects
+[20:40:42] [INFO ] [tile_entity_types] Found 1 tags, added 0 objects, removed 0 objects
+[20:40:42] [INFO ] [tile_entity_types] Found 1 tags, added 0 objects, removed 0 objects
+[20:40:43] [INFO ] Found 7883 recipes and 0 failed recipes in 300.4 ms
+[20:40:43] [INFO ] Posted recipe events in 439.2 μs
+[20:40:43] [INFO ] Modified & removed recipes in 196.2 ms
+[20:40:43] [INFO ] Added 0 recipes, removed 0 recipes, modified 0 recipes, with 0 failed recipes and 0 fall-backed recipes
+[20:40:43] [INFO ] Added recipes in 36.20 μs
+[20:40:44] [INFO ] [functions] Found 0 tags, added 0 objects, removed 0 objects
+[20:40:44] [INFO ] [functions] Found 0 tags, added 0 objects, removed 0 objects
+[20:40:45] [INFO ] [il_tags/elementalcraft_runes] Found 3 tags, added 0 objects, removed 0 objects
+[20:40:45] [INFO ] [il_tags/elementalcraft_runes] Found 3 tags, added 0 objects, removed 0 objects

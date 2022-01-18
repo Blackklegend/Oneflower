@@ -1,0 +1,19 @@
+#This is the application ID that you will find in the General Information tab on your application page on https://discord.com/developers/applications/.
+applicationID = "931757265902534676"
+#This is the text that will be show underneath the title of your application.
+details = "A magic focused modpack"
+#This is the text that will be show underneath the details.
+state = "Overworld"
+#This is the name of your uploaded image that you want to be your large image on the application tab > Rich Presence > Art Assets.
+largeImageKey = "stolen_demon_heart"
+#This is the text that will show up when you hover over the large image.
+largeImageText = "futuro link da curse"
+#This is the name of your uploaded image that you want to be your small image on the application tab > Rich Presence > Art Assets.
+smallImageKey = ""
+#This is the text that will show up when you hover over the small image.
+smallImageText = "'nothing'"
+#Keep true if you want to see how long you have been playing underneath the state text.
+timestampEnabled = true
+#Keep true if you want to start the automated chat setup when the mod hasn't been setup yet
+autoChatSetup = true
+

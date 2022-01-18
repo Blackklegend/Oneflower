@@ -1,0 +1,16 @@
+./crash-reports
+./local
+./logs
+./natives
+./patchouli_books
+./resourcepacks
+./saves
+./screenshots
+./XaeroWaypoints
+./XaeroWaypoints_BACKUP032021
+config.json
+option.txt
+patchouli_data.json
+simple-rpc.bak
+usercache.json
+usernamecache.json
