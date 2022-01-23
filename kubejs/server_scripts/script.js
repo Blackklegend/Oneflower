@@ -22,6 +22,12 @@ onEvent('recipes', event => {
 		event.remove({output: remove})
 	}
 
+	//Remove wooden and stone tools
+	for (let tools of ['sword', 'shovel', 'pickaxe', 'axe', 'hoe']) {
+		event.remove({output: 'minecraft:wooden_' + tools})
+		event.remove({output: 'minecraft:stone_' + tools})
+	}
+
 	//Shortcuts
 	let blockCraft4 = (output, input) => {
 		event.shaped(output, [
