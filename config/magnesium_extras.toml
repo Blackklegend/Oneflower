@@ -8,10 +8,10 @@
 
 	[Settings.Misc]
 		"Cloud Height [Raw, Default 196]" = 196
-		"Render Fog" = true
+		"Render Fog" = false
 		#Allowed Values: WINDOWED, BORDERLESS, FULLSCREEN
 		"Use Borderless Fullscreen" = "WINDOWED"
-		"Chunk Fade In Quality (OFF, FAST, FANCY)" = "FANCY"
+		"Chunk Fade In Quality (OFF, FAST, FANCY)" = "OFF"
 
 	[Settings.Zoom]
 		"Cinematic Camera Mode (OFF, VANILLA, MULTIPLIED)" = "OFF"

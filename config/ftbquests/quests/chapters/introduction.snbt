@@ -1,0 +1,101 @@
+{
+	id: "78842AFAB5A88BC3"
+	group: ""
+	order_index: 0
+	filename: "introduction"
+	title: "Introduction"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: 0.0d
+			id: "56082DBC1387D225"
+			tasks: [{
+				id: "23621862B05F8D9D"
+				type: "item"
+				item: "minecraft:oak_sapling"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 1.0d
+			id: "34355BCFB394C08A"
+			tasks: [{
+				id: "309D7A15E4E631C6"
+				type: "item"
+				item: "botania:white_mystical_flower"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 1.0d
+			id: "4DEF810E098281B3"
+			tasks: [{
+				id: "500C198C5B8F63C3"
+				type: "item"
+				item: "botania:white_petal_block"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 0.0d
+			id: "6BF1260B9BC7F2B1"
+			tasks: [{
+				id: "551A2BE8F3ADFD65"
+				type: "item"
+				item: "minecraft:oak_log"
+			}]
+		}
+		{
+			x: 3.0d
+			y: 0.0d
+			id: "5AA44123EE1883A2"
+			tasks: [{
+				id: "246977F0FAEDEC80"
+				type: "item"
+				item: "minecraft:composter"
+			}]
+		}
+		{
+			x: 3.0d
+			y: 1.0d
+			id: "3FE1EFF4D1EA73D1"
+			tasks: [{
+				id: "326B5DF56B8B7D73"
+				type: "item"
+				item: "botania:white_petal"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 0.0d
+			id: "31464A1C884F7964"
+			tasks: [{
+				id: "7D71D63076D1CEB7"
+				type: "item"
+				item: "minecraft:bone_meal"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 1.0d
+			id: "1D062452474FD134"
+			tasks: [{
+				id: "12E9CBAB1B3A0AF4"
+				type: "item"
+				item: "botania:fertilizer"
+			}]
+		}
+		{
+			x: 6.0d
+			y: 1.0d
+			id: "00AF13F4FDE71562"
+			tasks: [{
+				id: "5550D0C7C1A47717"
+				type: "item"
+				item: "botania:lime_mystical_flower"
+			}]
+		}
+	]
+}

@@ -1,11 +1,22 @@
 // priority: 0
 
 onEvent('item.registry', event => {
+	//Generic add function
+
+	function convertToId(name) {
+		return 'oneflower:' + name.replace(/ /, '_').toLowerCase()
+	}
+
 	//Generic item add
-	let itemI = ['oneflower:adobe_blend', 'oneflower:adobe_brick']
 	let itemN = ['Adobe Blend', 'Adobe Brick']
-	for (let i = 0; i < itemI.length; i++) {
-		event.create(itemI[i]).displayName(itemN[i])
+	for (let i = 0; i < itemN.length; i++) {
+		event.create(convertToId(itemN[i])).displayName(itemN[i])
+	}
+
+	//Generic unstackable item add
+	let itemU = ['Creativity Bag', 'Void Pearl']
+	for (let i = 0; i < itemU.length; i++) {
+		event.create(convertToId(itemU[i])).displayName(itemU[i]).unstackable()
 	}
 
 	//Wooden shears
@@ -39,4 +50,16 @@ onEvent('block.registry', event => {
 		.harvestTool('pickaxe', 0)
 		.requiresTool(true)
 		.resistance(6);
+
+	//Abstract plataform
+	event
+		.create('oneflower:abstract_block')
+		.displayName('Abstract Block')
+		.hardness(0)
+		.noItem()
+		.lightLevel(1)
+		.renderType('type')
+		.suffocating(false)
+		.waterlogged()
+		.defaultTranslucent();
 })

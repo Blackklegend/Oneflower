@@ -54,16 +54,6 @@ onEvent('recipes', event => {
 			})
 	}
 
-	//?Botania petal blocks
-	for (let colors of ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'red', 'black', 'blue', 'purple', 'brown', 'green' ]) {
-		event.remove({output: 'botania:' + colors + '_petal_block'})
-		blockCraft4('botania:' + colors + '_petal_block', 'botania:' + colors + '_petal')
-		event.remove({output: 'botania:' + colors + '_petal', input: /petal_block/})
-		unblockCraft4('botania:' + colors + '_petal', 'botania:' + colors + '_petal_block')
-	}
-
-	//Generic recipe add
-
 	//Copper blast furnace
 	event.shaped('minecraft:blast_furnace', [
 		'SSS',
@@ -122,4 +112,26 @@ onEvent('recipes', event => {
 	//Pure daisy lava-ice
 	pureDaisy('minecraft:lava', 'botania:red_petal_block')
 	pureDaisy('minecraft:ice', 'botania:light_blue_petal_block')
+
+	//Creativity Bag
+	event.shaped('oneflower:creativity_bag', [
+		'PMP',
+		'GBG',
+		'PMP'
+	], {
+		P: '#botania:petals',
+		M: 'botania:manasteel_ingot',
+		G: 'botania:mana_glass',
+		B: 'effortlessbuilding:randomizer_bag'
+	})
+
+	//Void pearl
+	event.shaped('oneflower:void_pearl', [
+		' N ',
+		'NVN',
+		' N '
+	], {
+		N: 'eidolon:arcane_gold_nugget',
+		V: 'bloodmagic:reagentvoid'
+	})
 })

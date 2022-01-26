@@ -19,9 +19,9 @@ minecraft:bastion_remnant
 astralsorcery:ancient_shrine
 astralsorcery:desert_shrine
 astralsorcery:small_shrine
-appliedenergistics2:meteorite
 eidolon:lab
 eidolon:stray_tower
 eidolon:catacomb
 elementalcraft:source_altar
+appliedenergistics2:meteorite
 quark:big_dungeon
