@@ -30,6 +30,28 @@ onEvent('item.registry', event => {
 })
 
 onEvent('block.registry', event => {
+	
+	//Adobe bricks
+	event
+	.create('oneflower:adobe_bricks')
+	.displayName('Adobe Bricks')
+	.hardness(1)
+	.harvestTool('pickaxe', 0)
+	.requiresTool(true)
+	.resistance(6);
+	
+	//Abstract plataform
+	event
+	.create('oneflower:abstract_block')
+	.displayName('Abstract Block')
+	.hardness(0)
+	.noItem()
+	.lightLevel(1)
+	.renderType('type')
+	.suffocating(false)
+	.waterlogged()
+	.defaultTranslucent();
+	
 	//Mystical bush
 	event
 		.create('fabio:mystical_bush')
@@ -40,26 +62,25 @@ onEvent('block.registry', event => {
 		.notSolid()
 		.renderType('cutout')
 		.defaultCutout()
+		.setLootTableJson({
+			"type": "minecraft:block",
+			"pools": [
+				{
+					"rolls": 1.0,
+					"bonus_rolls": 0.0,
+					"entries": [
+						{
+						"type": "minecraft:item",
+						"name": "minecraft:oak_log"
+						}
+					],
+					"conditions": [
+						{
+						"condition": "minecraft:survives_explosion"
+						}
+					]
+				}
+			]
+		})
 		.noItem();
-
-	//Adobe bricks
-	event
-		.create('oneflower:adobe_bricks')
-		.displayName('Adobe Bricks')
-		.hardness(1)
-		.harvestTool('pickaxe', 0)
-		.requiresTool(true)
-		.resistance(6);
-
-	//Abstract plataform
-	event
-		.create('oneflower:abstract_block')
-		.displayName('Abstract Block')
-		.hardness(0)
-		.noItem()
-		.lightLevel(1)
-		.renderType('type')
-		.suffocating(false)
-		.waterlogged()
-		.defaultTranslucent();
 })
