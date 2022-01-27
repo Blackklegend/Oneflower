@@ -4,6 +4,7 @@
 	order_index: 0
 	filename: "introduction"
 	title: "Introduction"
+	icon: "botania:white_mystical_flower"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
@@ -30,6 +31,7 @@
 		{
 			x: 1.5d
 			y: 1.0d
+			dependencies: ["34355BCFB394C08A"]
 			id: "4DEF810E098281B3"
 			tasks: [{
 				id: "500C198C5B8F63C3"
@@ -40,6 +42,7 @@
 		{
 			x: 1.5d
 			y: 0.0d
+			dependencies: ["56082DBC1387D225"]
 			id: "6BF1260B9BC7F2B1"
 			tasks: [{
 				id: "551A2BE8F3ADFD65"
@@ -50,6 +53,7 @@
 		{
 			x: 3.0d
 			y: 0.0d
+			dependencies: ["6BF1260B9BC7F2B1"]
 			id: "5AA44123EE1883A2"
 			tasks: [{
 				id: "246977F0FAEDEC80"
@@ -60,6 +64,7 @@
 		{
 			x: 3.0d
 			y: 1.0d
+			dependencies: ["4DEF810E098281B3"]
 			id: "3FE1EFF4D1EA73D1"
 			tasks: [{
 				id: "326B5DF56B8B7D73"
@@ -70,6 +75,10 @@
 		{
 			x: 4.5d
 			y: 0.0d
+			dependencies: [
+				"5AA44123EE1883A2"
+				"3FE1EFF4D1EA73D1"
+			]
 			id: "31464A1C884F7964"
 			tasks: [{
 				id: "7D71D63076D1CEB7"
@@ -80,6 +89,10 @@
 		{
 			x: 4.5d
 			y: 1.0d
+			dependencies: [
+				"31464A1C884F7964"
+				"3FE1EFF4D1EA73D1"
+			]
 			id: "1D062452474FD134"
 			tasks: [{
 				id: "12E9CBAB1B3A0AF4"
@@ -90,6 +103,7 @@
 		{
 			x: 6.0d
 			y: 1.0d
+			dependencies: ["1D062452474FD134"]
 			id: "00AF13F4FDE71562"
 			tasks: [{
 				id: "5550D0C7C1A47717"

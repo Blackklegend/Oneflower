@@ -1,33 +1,33 @@
 {
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
+    "type": "minecraft:block",
+    "pools": [
         {
-          "type": "item",
-          "name": "minecraft:oak_sapling"
-        }
-      ],
-      "conditions": [
+        "rolls": 1,
+        "entries": [
+            {
+            "type": "item",
+            "name": "minecraft:oak_sapling"
+            }
+        ],
+        "conditions": [
+            {
+            "condition": "minecraft:survives_explosion"
+            }
+        ]
+        },
         {
-          "condition": "minecraft:survives_explosion"
+        "rolls": 1,
+        "entries": [
+            {
+            "type": "item",
+            "name": "botania:white_mystical_flower"
+            }
+        ],
+        "conditions": [
+            {
+            "condition": "minecraft:survives_explosion"
+            }
+        ]
         }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "botania:white_mystical_flower"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
-    }
-  ]
+    ]
 }

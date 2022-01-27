@@ -1,0 +1,162 @@
+{
+	id: "7B4DA9DED79968A7"
+	group: ""
+	order_index: 1
+	filename: "the_forge"
+	title: "The Forge"
+	icon: "minecraft:anvil"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: 0.0d
+			id: "57AFA145628BFF23"
+			tasks: [{
+				id: "29439B64F65A2820"
+				type: "item"
+				item: "botania:pebble"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 0.0d
+			dependencies: ["57AFA145628BFF23"]
+			id: "5A40E92DEDCBF078"
+			tasks: [{
+				id: "1567519F491689A1"
+				type: "item"
+				item: "botania:apothecary_default"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 1.0d
+			dependencies: ["5A40E92DEDCBF078"]
+			id: "7F44549F5D9D3AF3"
+			tasks: [{
+				id: "149147C65C6CF165"
+				type: "item"
+				item: "botania:endoflame"
+			}]
+		}
+		{
+			x: 3.0d
+			y: 0.0d
+			dependencies: ["5A40E92DEDCBF078"]
+			id: "16321889F2BAF11B"
+			tasks: [{
+				id: "03DFBCEDB841D8FA"
+				type: "item"
+				item: "botania:orechid"
+			}]
+		}
+		{
+			x: 3.0d
+			y: -1.0d
+			optional: true
+			id: "663ADC68D6E64333"
+			tasks: [{
+				id: "055EF65F5CFCA3EC"
+				type: "item"
+				item: "minecraft:cobblestone"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 0.0d
+			dependencies: [
+				"16321889F2BAF11B"
+				"27E43741AC0593FE"
+			]
+			id: "60C1082FB1AD0047"
+			tasks: [{
+				id: "525E37B259D525D7"
+				type: "item"
+				item: {
+					id: "custommachinery:custom_machine_item"
+					Count: 1b
+					tag: {
+						machine: "custommachinery:adobe_blast_furnace"
+					}
+				}
+			}]
+		}
+		{
+			x: 4.5d
+			y: 1.0d
+			dependencies: ["60C1082FB1AD0047"]
+			id: "5555EED4860048F0"
+			tasks: [{
+				id: "6A43FFC23C510CCE"
+				type: "item"
+				item: "minecraft:stick"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 2.0d
+			dependencies: ["60C1082FB1AD0047"]
+			id: "28A2284F4A7E39D0"
+			tasks: [{
+				id: "72E684F46373F1B3"
+				type: "item"
+				item: "minecraft:oak_planks"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 4.0d
+			dependencies: ["60C1082FB1AD0047"]
+			id: "20344D292140C35A"
+			tasks: [{
+				id: "50F3F1E244D76740"
+				type: "item"
+				item: "minecraft:coal"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 5.0d
+			dependencies: ["60C1082FB1AD0047"]
+			id: "49191B6B248F657C"
+			tasks: [{
+				id: "7DC9CF12586E3873"
+				type: "item"
+				item: "minecraft:lava_bucket"
+			}]
+		}
+		{
+			x: 4.5d
+			y: 3.0d
+			dependencies: ["60C1082FB1AD0047"]
+			id: "1254E5D6620565A9"
+			tasks: [{
+				id: "054F6006251695B0"
+				type: "item"
+				item: "minecraft:charcoal"
+			}]
+		}
+		{
+			x: 4.5d
+			y: -1.0d
+			dependencies: ["6E5F5B98AFBB5E49"]
+			id: "27E43741AC0593FE"
+			tasks: [{
+				id: "1920AB6FCB8296D7"
+				type: "item"
+				item: "oneflower:adobe_blend"
+			}]
+		}
+		{
+			x: 4.5d
+			y: -2.0d
+			id: "6E5F5B98AFBB5E49"
+			tasks: [{
+				id: "5E4EB9210C50BCC5"
+				type: "item"
+				item: "minecraft:sand"
+			}]
+		}
+	]
+}
