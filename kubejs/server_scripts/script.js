@@ -1,4 +1,5 @@
 // priority: 0
+//Server scripts
 
 settings.logAddedRecipes = true
 settings.logRemovedRecipes = true
@@ -17,121 +18,129 @@ onEvent('item.tags', event => {
 
 onEvent('recipes', event => {
 
-	//Generic recipe remove
-	for (let remove of ['minecraft:blast_furnace', 'minecraft:shears']) {
-		event.remove({output: remove})
-	}
-
-	//Remove wooden and stone tools
-	for (let tools of ['sword', 'shovel', 'pickaxe', 'axe', 'hoe']) {
-		event.remove({output: 'minecraft:wooden_' + tools})
-		event.remove({output: 'minecraft:stone_' + tools})
-	}
-
-	//Shortcuts
-	let blockCraft4 = (output, input) => {
-		event.shaped(output, [
-			'II',
-			'II'
-		], {
-			I: input
-		})
-	}
-	let unblockCraft4 = (output, input) => {
-		event.shapeless('4x ' + output, input)
-	}
-
-	let pureDaisy = (output, input) => {
-		event.custom({
-			"type": "botania:pure_daisy",
-			"input": {
-				"type": "block",
-				"block": input
-			},
-			"output": {
-				"name": output
-			}
+	//~ Shortcuts
+		let blockCraft4 = (output, input) => {
+			event.shaped(output, [
+				'II',
+				'II'
+			], {
+				I: input
 			})
-	}
+		}
+		let unblockCraft4 = (output, input) => {
+			event.shapeless('4x ' + output, input)
+		}
 
-	//Copper blast furnace
-	event.shaped('minecraft:blast_furnace', [
-		'SSS',
-		'CFC',
-		'BBB'
-	], {
-		S: 'minecraft:stone',
-		C: '#forge:ingots/copper',
-		F: 'minecraft:furnace',
-		B: 'minecraft:smooth_stone'
-	})
+		let pureDaisy = (output, input) => {
+			event.custom({
+				"type": "botania:pure_daisy",
+				"input": {
+					"type": "block",
+					"block": input
+				},
+				"output": {
+					"name": output
+				}
+				})
+		}
 
-	//Adobe
-	event.custom({"type": "interactio:item_fluid_transform",
-		"inputs": [
-			{
-				"item":  "minecraft:dirt",
-				"count": 1
-			},
-			{
-				"item": "minecraft:grass",
-				"count": 1
-			}
-		],
-		"fluid": {"fluid": "water"},
-		"output": {
-			"item": "oneflower:adobe_blend",
-			"count": 4
-		},
-		"consume_fluid": 0.3333
-	})
+	//~ Generic recipe remove
+		for (let remove of ['minecraft:blast_furnace', 'minecraft:shears']) {
+			event.remove({output: remove})
+		}
 
-	event.campfireCooking('minecraft:brick', 'minecraft:clay_ball').cookingTime(400)
-	event.campfireCooking('oneflower:adobe_brick', 'oneflower:adobe_blend').cookingTime(400)
-	blockCraft4('oneflower:adobe_bricks', 'oneflower:adobe_brick')
-	unblockCraft4('oneflower:adobe_brick', 'oneflower:adobe_bricks')
+	//~ Remove wooden and stone tools
+		for (let tools of ['sword', 'shovel', 'pickaxe', 'axe', 'hoe']) {
+			event.remove({output: 'minecraft:wooden_' + tools})
+			event.remove({output: 'minecraft:stone_' + tools})
+		}
 
-	//Shears
-	event.shaped('minecraft:shears', [
-		'SI',
-		'NS'
-	], {
-		S: 'minecraft:stick',
-		I: 'minecraft:iron_ingot',
-		N: 'minecraft:iron_nugget'
-	})
-	event.shaped('oneflower:wooden_shears', [
-		'SP',
-		'BS'
-	], {
-		S: '#forge:rods/wooden',
-		P: '#minecraft:planks',
-		B: '#minecraft:wooden_buttons'
-	})
+	//~ Shaped recipes
+		//Copper blast furnace
+			event.shaped('minecraft:blast_furnace', [
+				'SSS',
+				'CFC',
+				'BBB'
+			], {
+				S: 'minecraft:stone',
+				C: '#forge:ingots/copper',
+				F: 'minecraft:furnace',
+				B: 'minecraft:smooth_stone'
+			})
+		//Shears
+			//* Minecraft shears
+				event.shaped('minecraft:shears', [
+					'SI',
+					'NS'
+				], {
+					S: 'minecraft:stick',
+					I: 'minecraft:iron_ingot',
+					N: 'minecraft:iron_nugget'
+				})
+			//* Wooden shears
+				event.shaped('oneflower:wooden_shears', [
+					'SP',
+					'BS'
+				], {
+					S: '#forge:rods/wooden',
+					P: '#minecraft:planks',
+					B: '#minecraft:wooden_buttons'
+				})
 
-	//Pure daisy lava-ice
-	pureDaisy('minecraft:lava', 'botania:red_petal_block')
-	pureDaisy('minecraft:ice', 'botania:light_blue_petal_block')
+		//Creativity Bag
+			event.shaped('oneflower:creativity_bag', [
+				'PMP',
+				'GBG',
+				'PMP'
+			], {
+				P: '#botania:petals',
+				M: 'botania:manasteel_ingot',
+				G: 'botania:mana_glass',
+				B: 'effortlessbuilding:randomizer_bag'
+			})
+	
+		//Void pearl
+			event.shaped('oneflower:void_pearl', [
+				' N ',
+				'NVN',
+				' N '
+			], {
+				N: 'eidolon:arcane_gold_nugget',
+				V: 'bloodmagic:reagentvoid'
+			})
+		
+	//~ Custom recipes
+		//Adobe
+			blockCraft4('oneflower:adobe_bricks', 'oneflower:adobe_brick')
+			unblockCraft4('oneflower:adobe_brick', 'oneflower:adobe_bricks')
 
-	//Creativity Bag
-	event.shaped('oneflower:creativity_bag', [
-		'PMP',
-		'GBG',
-		'PMP'
-	], {
-		P: '#botania:petals',
-		M: 'botania:manasteel_ingot',
-		G: 'botania:mana_glass',
-		B: 'effortlessbuilding:randomizer_bag'
-	})
+			event.custom({"type": "interactio:item_fluid_transform",
+				"inputs": [
+					{
+						"item":  "minecraft:dirt",
+						"count": 1
+					},
+					{
+						"item": "minecraft:grass",
+						"count": 1
+					}
+				],
+				"fluid": {"fluid": "water"},
+				"output": {
+					"item": "oneflower:adobe_blend",
+					"count": 4
+				},
+				"consume_fluid": 0.3333
+			})
+	
+	//~ Campfire Recipes
+		event.campfireCooking('minecraft:brick', 'minecraft:clay_ball').cookingTime(400)
+		event.campfireCooking('oneflower:adobe_brick', 'oneflower:adobe_blend').cookingTime(400)
 
-	//Void pearl
-	event.shaped('oneflower:void_pearl', [
-		' N ',
-		'NVN',
-		' N '
-	], {
-		N: 'eidolon:arcane_gold_nugget',
-		V: 'bloodmagic:reagentvoid'
-	})
+	//~ Pure daisy
+		//* Lava to red_petal_block
+			pureDaisy('minecraft:lava', 'botania:red_petal_block')
+		//* Ice to light_blue_petal_block
+			pureDaisy('minecraft:ice', 'botania:light_blue_petal_block')
 })
+//End of file
