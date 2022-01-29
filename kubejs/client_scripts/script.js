@@ -18,7 +18,6 @@ onEvent('jei.hide.items', event => {
 	//Remove wooden and stone tools
 	for (let tools of ['sword', 'shovel', 'pickaxe', 'axe', 'hoe']) {
 		event.hide('minecraft:wooden_' + tools)
-		event.hide('minecraft:stone_' + tools)
 	}
 
 	//Fluid container
