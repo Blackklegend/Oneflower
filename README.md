@@ -9,10 +9,10 @@ Being heavily modified using JavaScript through [KubeJS](https://github.com/Kube
 ## **Milestones**
 
 - 1.0  
-  - Implement quest/progress line
-  - Fix drops
-  - Fix added items
-  - Add planned mechanics
+  - [ ] Implement quest/progress line
+  - [ ] Fix drops
+  - [ ] Fix added items
+  - [ ] Add planned mechanics
 
 ## **Modlist**
 
