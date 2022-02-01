@@ -68,5 +68,3 @@ Being heavily modified using JavaScript through [KubeJS](https://github.com/Kube
   *   [Entity Culling(meldexun)](https://www.curseforge.com/minecraft/mc-mods/entity-culling)
   *   [Out Of Sight(Corosus)](https://www.curseforge.com/minecraft/mc-mods/out-of-sight)
   *   [Halogen(spoorn)](https://www.curseforge.com/minecraft/mc-mods/halogen)
-
-----------------------------
